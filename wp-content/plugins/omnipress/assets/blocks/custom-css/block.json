@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 1,
+  "name": "omnipress/css",
+  "title": "Custom Css",
+  "category": "omnipress",
+  "icon": "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50' height='50' viewBox='0 0 50 50'><defs> <clipPath id='clip-op-customcss-icon'> <rect width='50' height='50'/></clipPath></defs><g id='op-customcss-icon' clip-path='url(#clip-op-customcss-icon)'><rect width='50' height='50' fill='#fff'/><path id='Path_10' data-name='Path 10' d='M189.625-26h-42.25L148-57l41.625-1v32ZM151-54v28h40l-1.375-28H151Z' transform='translate(-143 68)' fill='#b2c5ef'/><path id='Path_11' data-name='Path 11' d='M194-23H148V-57h46v34h0Zm-43-3h40V-54H151Zm35.183-1.68,3.054-3.054.764.763-3.055,3.055Zm-2.137-.305,4.886-4.886.763.763-4.886,4.886ZM157-41.5V-44h16v2.5Zm0-4V-48h22v2.5Z' transform='translate(-146 65)' fill='#175fff'/></g></svg>",
+  "description": "Custom CSS blocks in a FSE Block-based theme allow users to add their own styling code to customize the appearance of specific blocks without modifying the theme files directly.",
+  "keywords": [
+    "custom",
+    "css"
+  ],
+  "textdomain": "default",
+  "attributes": {
+    "css": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "anchor": true,
+    "className": true,
+    "__unstablePasteTextInline": true,
+    "__experimentalSlashInserter": true
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
+}

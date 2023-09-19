@@ -1,0 +1,369 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "omnipress/heading",
+  "version": "1.0.0",
+  "title": "Heading",
+  "category": "omnipress",
+  "icon": "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50' height='50' viewBox='0 0 50 50'><defs><clipPath id='clip-op-heading-icon'><rect width='50' height='50'/></clipPath></defs><g id='op-heading-icon' clip-path='url(#clip-op-heading-icon)'><path id='Path_4' data-name='Path 4' d='M278-23.749V-57l33.381-.828v33.251Zm3.378,1.37h31.244V-53.623H281.378Zm9.5-21.744Z' transform='translate(-269 66)' fill='#b2c5ef'/><path id='Path_2' data-name='Path 2' d='M278-19V-57h38v38Zm3.378-3.379h31.244V-53.623H281.378Zm17.372-9.5a.437.437,0,0,1-.437-.436v-.875a.437.437,0,0,1,.437-.437h.874v-3.5h-5.247v3.5h.874a.437.437,0,0,1,.437.437v.875a.437.437,0,0,1-.437.436h-4.373a.437.437,0,0,1-.437-.436v-.875a.437.437,0,0,1,.437-.437h.875v-8.746h-.875a.438.438,0,0,1-.437-.437v-.875a.438.438,0,0,1,.437-.437h4.373a.437.437,0,0,1,.437.437v.875a.437.437,0,0,1-.437.437h-.874v3.5h5.247v-3.5h-.874a.437.437,0,0,1-.437-.437v-.875a.437.437,0,0,1,.437-.437h4.373a.438.438,0,0,1,.437.437v.875a.438.438,0,0,1-.437.437h-.875v8.746h.875a.437.437,0,0,1,.437.437v.875a.437.437,0,0,1-.437.436Z' transform='translate(-272 63)' fill='#175fff'/></g></svg>",
+  "description": "Advanced Heading blocks offer enhanced customization options for visually appealing headings, subheadings, and separators on WordPress websites, boosting their aesthetic appeal.",
+  "supports": {
+    "html": false,
+    "className": false,
+    "defaultStylePicker": false
+  },
+  "attributes": {
+    "headingStyles": {
+      "type": "object",
+      "default": {
+        "fontSize": null,
+        "mdFontSize": null,
+        "smFontSize": null,
+        "lineHeight": null,
+        "fontWeight": null,
+        "fontFamily": null,
+        "color": null,
+        "hovercolor": null,
+        "textAlign": null,
+        "mdTextAlign": null,
+        "smTextAlign": null,
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "textShadow": {
+          "blur": null,
+          "color": null,
+          "x": null,
+          "y": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "background": null,
+        "hoverbackground": null,
+        "textDecoration": null,
+        "textTransform": null,
+        "border": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdBorder": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smBorder": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "borderRadius": {
+          "topRight": null,
+          "topLeft": null,
+          "bottomRight": null,
+          "bottomLeft": null
+        },
+        "zIndex": null,
+        "transform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "mdTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "smTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "position": "relative",
+        "mdPosition": "relative",
+        "smPosition": "relative"
+      }
+    },
+    "isLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "newTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "href": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "default": "Discover the Secret to a Powerful Headline!"
+    },
+    "headingType": {
+      "type": "string",
+      "default": "h2"
+    },
+    "blockId": {
+      "type": "string"
+    },
+    "seperatorIsActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "seperator": {
+      "type": "object",
+      "default": {
+        "height": "10px",
+        "mdHeight": "10px",
+        "smHeight": "10px",
+        "background": "green",
+        "width": "200px",
+        "mdWidth": "200px",
+        "smWidth": "200px",
+        "z-index": null,
+        "color": null,
+        "position": null,
+        "display": "block",
+        "mdPosition": null,
+        "smPosition": null,
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "transform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "mdTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "smTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        }
+      }
+    },
+    "subHeading": {
+      "type": "string",
+      "default": "Unlock the Power of Omnipress: Your WordPress Solution for Endless Possibilities!"
+    },
+    "subheadingTagName": {
+      "type": "string",
+      "default": "p"
+    },
+    "isOpenSubHeading": {
+      "type": "boolean",
+      "default": false
+    },
+    "linkStyles": {
+      "type": "object",
+      "default": {
+        "color": null,
+        "hover": null
+      }
+    },
+    "subHeadingStyling": {
+      "type": "object",
+      "default": {
+        "width": null,
+        "color": null,
+        "hovercolor": null,
+        "textAlign": null,
+        "mobileTextAlign": null,
+        "tabletTextAlign": null,
+        "transform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "mdTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "textShadow": {
+          "blur": null,
+          "color": null,
+          "x": null,
+          "y": null
+        },
+        "smTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "fontWeight": null,
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "position": "relative",
+        "mdPosition": null,
+        "smPosition": null,
+        "textDecoration": null,
+        "textTransform": null,
+        "fontSize": null,
+        "mdFontSize": null,
+        "smFontSize": null,
+        "display": "block",
+        "mdDisplay": "block",
+        "smDisplay": "block",
+        "fontFamily": null,
+        "zIndex": null,
+        "lineHeight": null
+      }
+    },
+    "isHeadingHideOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isHeadingHideOnTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "isHeadingHideOnDesktop": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSubHeadingHideOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSubHeadingHideOnTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSubHeadingHideOnDesktop": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSeperatorHideOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSeperatorHideOnTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSeperatorHideOnDesktop": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "heading",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css"
+}

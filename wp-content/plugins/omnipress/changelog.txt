@@ -1,0 +1,33 @@
+= 1.1.5 =
+* Fixes: Fixed CSS issue in other custom post types.
+* Fixes: Fixed demo import minor issues.
+
+= 1.1.4 =
+* Fixes: Fixed minor issue with slider.
+
+= 1.1.3 =
+* Fixes: Fixed minor issue with Entire Demo Importer.
+* Fixes: Minor issue with slider blocks.
+
+= 1.1.2 =
+* Enhancement: Added new blocks: Heading, Slider, Custom CSS, Team
+* Fixes: Fixed a bug related to demos and patterns UI and code optimizations.
+
+= 1.1.1 =
+* Fixes: Fixed minor issue with demo data import.
+
+= 1.1.0 =
+* Enhancement: Restructured plugin structure
+* Enhancement: Added support for patterns and demos list
+* Enhancement: Added patterns and demos library support from editor pages
+* Enhancement: Overall plugin re-designed.
+* Other: Compatibility test with WordPress 6.2
+
+= 1.0.1 =
+* Compatibility test with WordPress 6.1
+* Minor issues fixes
+
+= 1.0.0 =
+* Initial release
+
+

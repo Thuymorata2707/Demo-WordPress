@@ -1,0 +1,689 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "omnipress/slider",
+  "version": "1.0.0",
+  "title": "Slider",
+  "category": "omnipress",
+  "icon": "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50' height='50' viewBox='0 0 50 50' > <defs> <clipPath id='clip-op-slider-icon'>      <rect width='50' height='50' />    </clipPath>  </defs><g id='op-slider-icon' clipPath='url(#clip-op-slider-icon)'>    <path id='Path_3'      data-name='Path 3'       d='M347.842-34.235V-57H381.6v22.764H347.842Zm33.758,h0ZM350.842-33h32V-54h-32Z' transform='translate(-338.842 70)' fill='#b2c5ef' /> <path id='Path_1' data-name='Path 1' d='M370.842-25.5a1.5,1.5,0,0,1,1.5-1.5,1.5,1.5,0,0,1,1.5,1.5,1.5,1.5,0,0,1-1.5,1.5A1.5,1.5,0,0,1,370.842-25.5Zm-5,0a1.5,1.5,0,0,1,1.5-1.5,1.5,1.5,0,0,1,1.5,1.5,1.5,1.5,0,0,1-1.5,1.5A1.5,1.5,0,0,1,365.842-25.5Zm-5,0a1.5,1.5,0,0,1,1.5-1.5,1.5,1.5,0,0,1,1.5,1.5,1.5,1.5,0,0,1-1.5,1.5A1.5,1.5,0,0,1,360.842-25.5Zm-13-4.5V-57h38v27h-38Zm38,0h0Zm-35-3h32V-54h-32Zm8-7v-3h17v3ZM388-46l2.683,2.684L388-40.633Zm-45,2.684L345.684-46v5.367ZM354.842-45v-3h25v3Z'   transform='translate(-341.842 67)' fill='#175fff' /> </g> </svg>",
+  "description": "Slider blocks provide advanced customization options for creating custom sliders with features like background images, colors, content images, margins, paddings, and more..",
+  "supports": {
+    "html": false,
+    "className": true,
+    "dimensions": {
+      "minHeight": false,
+      "html": false
+    }
+  },
+  "attributes": {
+    "slideToggleOptions": {
+      "type": "object",
+      "default": {
+        "default": {
+          "fade": false,
+          "loop": false,
+          "autoplay": false
+        }
+      }
+    },
+    "sliderOtherOptions": {
+      "type": "object",
+      "default": {
+        "slidePerView": {
+          "sm": 1,
+          "md": 1,
+          "default": 1
+        },
+        "spaceBetween": {
+          "sm": 0,
+          "md": 0,
+          "default": 0
+        },
+        "delay": 2500
+      }
+    },
+    "content": {
+      "type": "object",
+      "default": {
+        "textAlign": "center"
+      }
+    },
+    "blockId": {
+      "type": "string",
+      "default": null
+    },
+    "title": {
+      "type": "string"
+    },
+    "isActiveCustomSlider": {
+      "type": "boolean",
+      "default": true
+    },
+    "arrowIconNext": {
+      "type": "string",
+      "default": "<svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='0' class='svg-inline--fa fa-0 ' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path fill='currentColor' d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'></path></svg>"
+    },
+    "arrowIconPrev": {
+      "type": "string",
+      "default": "<svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='angle-left' class='svg-inline--fa fa-angle-left ' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path fill='currentColor' d='M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z'></path></svg>"
+    },
+    "sliderWrapper": {
+      "type": "object",
+      "default": {
+        "background": null,
+        "backgroundBlendMode": null,
+        "backgroundImage": null,
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "border": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "Border": {
+          "topLeft": {
+            "readius": null
+          },
+          "topRight": {
+            "readius": null
+          },
+          "bottomRight": {
+            "radius": null
+          },
+          "bottomLeft": {
+            "radius": null
+          }
+        },
+        "transform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "mdTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "smTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "position": "relative",
+        "mdPosition": "relative",
+        "smPosition": "relative"
+      }
+    },
+    "slides": {
+      "type": "object",
+      "default": {
+        "backgroundBlendMode": null,
+        "Border": {
+          "topLeft": {
+            "readius": null
+          },
+          "topRight": {
+            "readius": null
+          },
+          "bottomRight": {
+            "radius": null
+          },
+          "bottomLeft": {
+            "radius": null
+          }
+        },
+        "border": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "borderRadius": {
+          "topRight": null,
+          "topLeft": null,
+          "bottomRight": null,
+          "bottomLeft": null
+        },
+        "height": "auto",
+        "zIndex": null,
+        "transform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "mdTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "smTransform": {
+          "translate": {
+            "x": null,
+            "y": null
+          }
+        },
+        "position": "relative",
+        "mdPosition": "relative",
+        "smPosition": "relative",
+        "min-height": "60vh",
+        "smMin-height": "60vh",
+        "mdMin-height": "60vh"
+      }
+    },
+    "inner": {
+      "type": "object",
+      "default": {
+        "justifyContent": "center",
+        "alignItems": "center",
+        "mdJustifyContent": "center",
+        "mdAlignItems": "center",
+        "smJustifyContent": "center",
+        "smAlignItems": "center",
+        "padding": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "mdPadding": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "smPadding": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        }
+      }
+    },
+    "innerContent": {
+      "type": "object",
+      "default": {
+        "width": "50%",
+        "mdWidth": null,
+        "smWidth": null
+      }
+    },
+    "slideArrow": {
+      "type": "object",
+      "default": {
+        "color": "#ffffff",
+        "width": "38px",
+        "height": null,
+        "display": "block",
+        "mdDisplay": "block",
+        "smDisplay": "block",
+        "Border": {
+          "topLeft": {
+            "radius": "5px"
+          },
+          "topRight": {
+            "radius": "5px"
+          },
+          "bottomRight": {
+            "radius": "5px"
+          },
+          "bottomLeft": {
+            "radius": "5px"
+          }
+        },
+        "border": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "Left": null
+        },
+        "padding": {
+          "top": "7px",
+          "right": "10px",
+          "bottom": "6px",
+          "left": "10px"
+        },
+        "mdPadding": {
+          "top": "7px",
+          "right": "10px",
+          "bottom": "6px",
+          "left": "10px"
+        },
+        "smPadding": {
+          "top": "7px",
+          "right": "10px",
+          "bottom": "6px",
+          "left": "10px"
+        },
+        "backgroundColor": "#FFFFFF57"
+      }
+    },
+    "slidePagination": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "width": "12px",
+        "hovercolor": null
+      }
+    },
+    "slidePaginationContainer": {
+      "type": "object",
+      "default": {
+        "display": "inline-block",
+        "mdDisplay": "inline-block",
+        "smDisplay": "inline-block"
+      }
+    },
+    "slideScrollbar": {
+      "type": "object",
+      "default": {
+        "backgroundColor": "#2f78f9",
+        "borderRadius": "32px",
+        "color": "#FFFFFF",
+        "height": "8px",
+        "display": "block",
+        "mdDisplay": "block",
+        "smDisplay": "block"
+      }
+    },
+    "slideTitle": {
+      "type": "object",
+      "default": {
+        "display": "inline-block",
+        "mdDisplay": "inline-block",
+        "smDisplay": "inline-block",
+        "fontSize": null,
+        "mdFontSize": null,
+        "smFontSize": null,
+        "textAlign": "left",
+        "mdTextAlign": "left",
+        "smTextAlign": "left",
+        "fontWeight": null,
+        "mdFontWeight": null,
+        "smFontWeight": null,
+        "lineHeight": null,
+        "mdLineHeight": null,
+        "smLineHeight": null,
+        "letterSpacing": null,
+        "mdLetterSpacing": null,
+        "smLetterSpacing": null,
+        "textDecooration": null,
+        "mdTextDecoration": null,
+        "smTextDecoration": null,
+        "textTransform": null,
+        "mdTextTransform": null,
+        "smTextTransform": null,
+        "color": null,
+        "hovercolor": null,
+        "textShadow": {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "color": null
+        },
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        }
+      }
+    },
+    "slideExcerpt": {
+      "type": "object",
+      "default": {
+        "display": "block",
+        "mdDisplay": "block",
+        "smDisplay": "block",
+        "fontSize": null,
+        "mdFontSize": null,
+        "smFontSize": null,
+        "textAlign": null,
+        "mdTextAlign": null,
+        "smTextAlign": null,
+        "fontWeight": null,
+        "mdFontWeight": null,
+        "smFontWeight": null,
+        "lineHeight": null,
+        "mdLineHeight": null,
+        "smLineHeight": null,
+        "letterSpacing": null,
+        "mdLetterSpacing": null,
+        "smLetterSpacing": null,
+        "textDecooration": null,
+        "mdTextDecoration": null,
+        "smTextDecoration": null,
+        "textTransform": null,
+        "mdTextTransform": null,
+        "smTextTransform": null,
+        "color": null,
+        "hovercolor": null,
+        "textShadow": {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "color": null
+        },
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        }
+      }
+    },
+    "slideButtonContainer": {
+      "type": "object",
+      "default": {
+        "display": "flex",
+        "mdDisplay": "flex",
+        "smDisplay": "flex",
+        "justifyContent": "left",
+        "mdJustifyContent": "left",
+        "smJustifyContent": "left"
+      }
+    },
+    "slideButton": {
+      "type": "object",
+      "default": {
+        "backgroundColor": "#fff",
+        "hoverbackgroundColor": "#224EA6",
+        "width": "auto",
+        "align": "left",
+        "mdAlign": "left",
+        "smAlign": "left",
+        "mdFontSize": null,
+        "fontSize": null,
+        "smFontSize": null,
+        "textAlign": null,
+        "mdTextAlign": null,
+        "smTextAlign": null,
+        "fontWeight": null,
+        "mdFontWeight": null,
+        "smFontWeight": null,
+        "lineHeight": null,
+        "mdLineHeight": null,
+        "smLineHeight": null,
+        "letterSpacing": null,
+        "mdLetterSpacing": null,
+        "smLetterSpacing": null,
+        "textDecooration": null,
+        "mdTextDecoration": null,
+        "smTextDecoration": null,
+        "textTransform": null,
+        "mdTextTransform": null,
+        "smTextTransform": null,
+        "color": "#224ea6",
+        "hovercolor": "#fff",
+        "hoverborderColor": null,
+        "textShadow": {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "color": null
+        },
+        "Border": {
+          "topLeft": {
+            "readius": null
+          },
+          "topRight": {
+            "readius": null
+          },
+          "bottomRight": {
+            "radius": null
+          },
+          "bottomLeft": {
+            "radius": null
+          }
+        },
+        "border": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "Left": null
+        },
+        "padding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smPadding": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "margin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "mdMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        },
+        "smMargin": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "left": null
+        }
+      }
+    },
+    "slideImage": {
+      "type": "object",
+      "default": {
+        "height": "230px",
+        "display": "none",
+        "mdDisplay": "none",
+        "smDisplay": "none",
+        "mdHeight": "230px",
+        "smHeight": "230px",
+        "width": "100%",
+        "mdWidth": "100%",
+        "smWidth": "100%",
+        "Border": {
+          "topLeft": {
+            "readius": null
+          },
+          "topRight": {
+            "readius": null
+          },
+          "bottomRight": {
+            "radius": null
+          },
+          "bottomLeft": {
+            "radius": null
+          }
+        },
+        "border": {
+          "top": null,
+          "right": null,
+          "bottom": null,
+          "Left": null
+        }
+      }
+    },
+    "sliderContent": {
+      "type": "array",
+      "default": [
+        {
+          "id": "kdhfjise",
+          "title": "Slide Title #1.",
+          "excerpt": "Lorem ipsum dolor sit amet consectetur adipiscing elit dolor",
+          "image": "",
+          "backgroundImage": null,
+          "backgroundImagePosition": "center center",
+          "background": "",
+          "link": "/",
+          "buttonContent": "Read More",
+          "newTab": false,
+          "overlay": "#0005",
+          "opacity": "0.5"
+        },
+        {
+          "id": "12edserd",
+          "title": "Slide Title #2",
+          "excerpt": "Lorem ipsum dolor sit amet consectetur adipiscing elit dolor",
+          "image": "",
+          "backgroundImage": null,
+          "background": "",
+          "link": "/",
+          "buttonContent": "Read More",
+          "newTab": false,
+          "backgroundImagePosition": "center center",
+          "overlay": "#0005",
+          "opacity": "0.5"
+        },
+        {
+          "id": "eyrhdwad",
+          "title": "Slide Title #3",
+          "excerpt": "Lorem ipsum dolor sit amet consectetur adipiscing elit dolor",
+          "image": "",
+          "backgroundImage": null,
+          "background": "",
+          "link": "/",
+          "buttonContent": "Read More",
+          "newTab": false,
+          "backgroundImagePosition": "center center",
+          "overlay": "#0005",
+          "opacity": "0.5"
+        },
+        {
+          "id": "asfesr",
+          "title": "Slide Title #4",
+          "excerpt": "Lorem ipsum dolor sit amet consectetur adipiscing elit dolor",
+          "image": "",
+          "buttonContent": "Read More",
+          "backgroundImage": null,
+          "background": "",
+          "backgroundImagePosition": "center center",
+          "link": "/",
+          "newTab": false,
+          "overlay": "#0005",
+          "opacity": "0.5"
+        }
+      ]
+    }
+  },
+  "textdomain": "heading",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./index.css",
+    "file:./container/public/index.css"
+  ],
+  "viewScript": [
+    "file:./container/public/index.js"
+  ],
+  "render": "file:./container/public/render.php"
+}
